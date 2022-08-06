@@ -1,3 +1,41 @@
+
+
+### What can I use this model for?
+_MAE can be trained self-supervised and then fine tuned for downstream tasks like image classification._
+
+
+### Table of contents
+
+- [Original repo](#catalog)
+- [FAQ](#faq)
+- [Google Colab link](https://colab.research.google.com/github/taskswithcode/mae/blob/master/TWCMAE.ipynb)  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/taskswithcode/mae/blob/master/TWCMAE.ipynb)
+- [Docker Link - TBD]
+
+
+
+### FAQ
+
+
+**1. What is unique about this fork?**
+
+ _This is just a repdroduction of the orignal repo [demo in notebook](https://colab.research.google.com/github/taskswithcode/mae/blob/master/TWCMAE.ipynb)_
+
+
+**2. Why reproduce and freeze an existing result?** 
+
+_Reproduction and freezing addresses the problem of Github repos (including their notebooks) breaking over time  due to updates on the dependent packages. This problem is circumvented by taking the environment snapshot of a working version_
+
+_The notebook downloads a working environment snapshot (made using conda-pack), including all required models. The docker version is essentially the same environment packaged in a container._
+
+**3. What are the limitations?**
+
+
+  _1. Conda-pack was performed on Ubuntu 20.04.4 LTS. The target OS needs to be the same for the notebook to work. This limitation is not there for the docker container even though conda-pack is used in its creation, given the container abstraction wrapped around it_
+
+  _2. Reproducibility is achieved by using conda-packed enviromment which needs to be run prior to execution of any code in the repository. This imposes a level of indirection in interactive coding in the notebook. Edits to python code needs to be made in a python file. The notebook cell merely serves as a command line interface to execute the python file or function._
+
+
+
 ## Masked Autoencoders: A PyTorch Implementation
 
 <p align="center">
